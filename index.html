@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Dein Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+    </script>
+
+
+    <header>
+        <div class="container">
+            <h1>Dein Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <button id="theme-toggle">🌙</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Grafikdesign, das Eindruck macht.</h2>
+            <p>Kreative Lösungen für digitale und analoge Medien.</p>
+            <a href="#portfolio" class="btn">Meine Arbeiten</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Über mich</h2>
+            <p>Ich bin Grafikdesigner mit einem Fokus auf digitale Medien, UI/UX und Präsentationsgestaltung.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+
+            <h3>Apps</h3>
+            <div class="grid">
+                <div class="card">
+                    <img src="app1.jpg" alt="App Design 1">
+                    <h4>App Projekt 1</h4>
+                    <p>Kurzbeschreibung des Projekts.</p>
+                </div>
+                <!-- Weitere App Projekte -->
+            </div>
+
+            <h3>PowerPoints</h3>
+            <div class="grid">
+                <div class="card">
+                    <img src="ppt1.jpg" alt="PowerPoint 1">
+                    <h4>PowerPoint Projekt 1</h4>
+                    <p>Präsentationsgestaltung für ein Business-Event.</p>
+                </div>
+                <!-- Weitere PPT Projekte -->
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Designprozess</h2>
+            <ul class="skills-list">
+                <li>Adobe Illustrator</li>
+                <li>Figma</li>
+                <li>PowerPoint-Design</li>
+                <li>UI/UX Grundlagen</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <form>
+                <input type="text" placeholder="Dein Name" required>
+                <input type="email" placeholder="Deine E-Mail" required>
+                <textarea placeholder="Deine Nachricht" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dein Name – Grafikdesign Portfolio</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
