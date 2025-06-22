@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt – Portfolio</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="include-header"></div>
+
+  <main class="container">
+    <h2>Kontakt</h2>
+  </main>
+
+  <div id="include-footer"></div>
+
+  <script src="/theme.js"></script>
+  <script>
+    async function includeHTML(id, file) {
+      const el = document.getElementById(id);
+      const res = await fetch(file);
+      el.innerHTML = await res.text();
+    }
+
+    includeHTML("include-header", "/header.html");
+    includeHTML("include-footer", "/footer.html");
+  </script>
+</body>
+</html>
