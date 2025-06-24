@@ -2,68 +2,30 @@
 <html lang="de">
 
 <head>
-    <link rel="stylesheet" href="/style.css">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apps – Portfolio</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apps – Portfolio</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
-  <div ></div>
+  <div class="header-container">
+    <h1 class="typewriter" id="typedtext"></h1>
+    <h1 class="caret">|</h1>
+  </div>
 
-    <div class="header-container">
-        <h1 class="typewriter" id="typedtext"></h1>
-        <h1 class="caret">|</h1>
-    </div>
-    
-        <p>Mein Portfolio</p>
-    <footer class="container">
-        <p>&copy; Michelle Gerwald</p>
-    </footer>
-    <script>
-    // set up text to print, each item in array is new line
-    var aText = new Array(
-      "Welcome..."
-    );
-    var iSpeed = 200; // time delay of print out
-    var iIndex = 0; // start printing array at this posision
-    var iArrLength = aText[0].length; // the length of the text array
-    var iScrollAt = 20; // start scrolling up at this many lines
+  <p>Mein Portfolio</p>
+  <footer class="container">
+    <p>&copy; Michelle Gerwald</p>
 
-    var iTextPos = 0; // initialise text position
-    var sContents = ''; // initialise contents variable
-    var iRow; // initialise current row
-
-    function typewriter()
-    {
-      sContents =  ' ';
-      iRow = Math.max(0, iIndex-iScrollAt);
-      var destination = document.getElementById("typedtext");
-
-      while ( iRow < iIndex ) {
-        sContents += aText[iRow++] + '<br />';
-      }
-      destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos);
-      if ( iTextPos++ == iArrLength ) {
-        iTextPos = 0;
-        iIndex++;
-        if ( iIndex != aText.length ) {
-          iArrLength = aText[iIndex].length;
-          setTimeout(typewriter, 500);
-        }
-      } else {
-        setTimeout(typewriter, iSpeed);
-      }
-    }
-
-    typewriter();
-    </script>
-    <script src="theme.js"></script>
+  </footer>
+  <script src="skripte/typewriter.js"></script>
+  <!-- <script src="skripte/theme.js"></script> -->
 </body>
 
 </html>
