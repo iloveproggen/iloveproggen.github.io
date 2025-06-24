@@ -67,7 +67,8 @@ div.header-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: repeating-linear-gradient(0deg, #ffffff, #ffffff 4px, #36363630 4px, #36363630 6px);;
+  background: repeating-linear-gradient(0deg, #ffffff, #ffffff 4px, #36363630 4px, #36363630 6px);
+  animation: flicker 3s infinite;
 }
 
 div.header-container::after {
@@ -98,5 +99,20 @@ footer {
   }
   100% {
     translate: 0 0;
+  }
+}
+
+@keyframes flicker {
+  8% {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+  10% {
+    opacity: 0.8;
+    transform: skewX(10deg);
+  }
+  12% {
+    opacity: 1;
+    transform: skewX(0deg);
   }
 }
