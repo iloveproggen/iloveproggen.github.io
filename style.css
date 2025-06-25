@@ -28,7 +28,7 @@ body {
   -webkit-font-smoothing : none;
 }
 
-h1{
+h1 {
   display: inline-block;
   color: var(--text-color);
   font-family: "Coral Pixels", serif;
@@ -38,16 +38,19 @@ h1{
 }
 
 .typewriter {
-  transform: translateX(1.9vw);
+  animation: skew 3s infinite;
+  transform-origin: center;
+  display: inline-block;
 }
 
-h1.caret{
+h1.caret {
   font-size: 30rem;
   font-size: 19vw;
-  transform: translateX(-1.9vw);
-  animation: 
-    blink-caret 1s step-end infinite;
+  transform-origin: center;
+  animation: blink-caret 1s step-end infinite;
 }
+
+/* Removed skew animation from div.header-container */
 
 /* The typing effect */
 @keyframes typing {
@@ -68,7 +71,6 @@ div.header-container {
   justify-content: center;
   align-items: center;
   background: repeating-linear-gradient(0deg, #ffffff, #ffffff 4px, #36363630 4px, #36363630 6px);
-  animation: skew 3s infinite;
 }
 
 div.header-container::after {
@@ -109,6 +111,18 @@ div.header-container::after {
   z-index: 2;
   pointer-events: none;
   animation: flicker 0.15s infinite;
+}
+
+div.crt-filter {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(#7bff0062, #000052);
+  opacity: 0.2;
 }
 
 footer {
